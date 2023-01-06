@@ -11,8 +11,14 @@ ifeq ($(origin .RECIPEPREFIX), undefined)
 endif
 .RECIPEPREFIX = >
 
+init: ## crea la imagen de docker y corre el docker-compose
+> @bash ./scripts/init.sh
+
 install: ## Instala dependencias
 > pip install -r requirements.txt
 
 run: ## Corre el proyecto
 > @bash ./scripts/run.sh
+
+stop: ## Para el docker-compose
+> docker-compose down

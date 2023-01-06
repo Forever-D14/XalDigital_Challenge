@@ -7,6 +7,9 @@ class Verifier:
 
     def __init__(self, url: str):
         self.api_url: str = url
+        print("""
+    ------------------------RETO 01------------------------------
+                """)
 
     def main(self) -> None:
 
